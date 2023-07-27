@@ -1,13 +1,16 @@
-const word = prompt("Inserisci una parola di 4 lettere")
+const word = prompt("Inserisci una parola.")
 // console.log(word[0]);
-for ( let i = 0; i < word.length; i++){
-    const letter = word[i] ;
-    // console.log(letter);
-}
-
-for (let i = 3; i < word.length; i--){
+let reverseWord =  "";
+for (let i = word.length - 1; i >= 0 ; i--){
     const letter = word[i];
-    console.log(letter);
+    reverseWord += letter;
+    console.log(reverseWord);
     
 }
-const reverseWord = reverseWord + letter ;
+if (word == reverseWord){
+    console.log(`La parola e polindroma`);
+}else {
+    console.log(`La parola non e polindroma`);
+}
+
+
